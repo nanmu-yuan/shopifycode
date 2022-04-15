@@ -1,0 +1,438 @@
+<style>
+    #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #mainContent .section-header {
+        display: none;
+    }
+
+    #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #mainContent img {
+        border-radius: 0;
+    }
+
+    #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .txt {
+        text-align: center;
+        max-width: 1060px;
+        margin: 60px auto;
+        font-size: 34px;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 72px;
+        margin-bottom: 50px;
+    }
+
+    .park-content .banner .desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .park-content .banner .info {
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .park-content .banner .info>div:first-child {
+        margin-right: 60px;
+    }
+
+    .park-content .banner .info img {
+        width: 23px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: text-top;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content p {
+        margin-bottom: 0;
+    }
+
+    .park-content {}
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content .page-content {
+        max-width: 1300px;
+        margin: auto;
+        background: #EEEEEE;
+        margin-top: 31px;
+    }
+
+    .park-content .page-content h3 {
+        font-size: 48px;
+        padding: 70px 0 35px;
+        text-align: center;
+    }
+
+    .park-content .page-content .sub {
+        padding-bottom: 40px;
+        font-size: 26px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .park-content .page-content .park-box p {
+        padding-bottom: 10px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .park-content .page-content p.name {
+        font-size: 16px;
+    }
+
+    .park-content .page-content p.desc {
+        font-weight: normal;
+    }
+
+    .park-content .page-content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 120px 50px;
+
+    }
+
+    .park-content .page-content .park-box .product-desc {
+        background-color: #efefef;
+        padding: 20px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors>div {
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 3px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors i {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .green {
+        background-color: #766037
+    }
+
+    .park-content .page-content .park-box a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
+    .park-content .page-content .park-box .btn {
+        background-color: #000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #fff;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    .park-content .banner picture {
+        display: flex;
+    }
+
+    .title-box1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 35px;
+        padding: 61px 142px 87px
+    }
+
+    .title-list-item {
+        min-height: 433px;
+        background: #FFFFFF;
+        border-radius: 10px 10px 10px 10px;
+        opacity: 1;
+    }
+    .item-pad{
+        padding: 27px;
+    }
+    .title-list-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 141px;
+    }
+    .title-list-item-font {
+        font-size: 18px;
+        font-weight: normal;
+        color: #000000;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .title-list-item-icon {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .title-list-item-bigfont {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 769px) {
+    .park-content .page-content .title-list-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        padding: 0 8px;
+    }
+    .park-content .page-content {
+        margin-top: 0;
+    }
+    .title-box1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 26px;
+        padding: 12px 8px 18px
+    }
+    .item-pad{
+        padding: 4px;
+    }
+    .title-list-item-icon{
+        width: 36px;
+        height: 34px;
+        margin: 0 auto;
+    }
+    .title-list-item {
+        background: #FFFFFF;
+        border-radius: 10px 10px 10px 10px;
+        opacity: 1;
+    }
+    .title-list-item-bigfont{
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .title-list-item-font{
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        line-height:normal
+    }
+
+        .park-content .banner .txtContent .title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .park-content .banner .info {
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .park-content .banner .info>div:first-child {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .park-content .banner .txtContent .desc {
+            font-size: 14px;
+            padding: 0 10px;
+            line-height: 22px;
+        }
+
+        .park-content .page-content .list {
+            grid-template-columns: 1fr;
+            padding: 0 20px 30px;
+            gap: 15px;
+        }
+
+        .park-content .page-content h3 {
+            font-size: 28px;
+            padding: 30px 0;
+        }
+
+        .park-content .page-content .sub {
+            padding: 0 10px 40px;
+            font-size: 16px;
+        }
+
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/513.png?v=1650028660" /> <img
+                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/514.png?v=1650028943" alt="" />
+        </picture>
+        <div class="txtContent">
+            <p class="title">Trip Clothing Guide</p>
+            <p class="desc"> </p>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="title-box1">
+            <p>
+                Yosemite’s stunning natural beauty was the impetus for designating the area a national park on October
+                1, 1890, and it is still inspiring visitors 125 years later. This treasure of the Sierra Nevadas is home
+                to legendary granite monoliths, including El Capitan and Half Dome, as well as waterfalls, lakes, deep
+                valleys, majestic meadows, and ancient giant sequoias.
+            </p>
+        </div>
+        <div class="title-list-box">
+            <div class="title-list-item">
+                <div class="item-pad" >
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS3.jpg?v=1645349925"alt="" width="100%">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>Where</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            central California, accessible from San Francisco, Sacramento, Los Angeles, and Las Vegas,
+                            Nevada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad" >
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS3.jpg?v=1645349925" alt="" width="100%">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>Where</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            art & photography, rock climbing, biking, birdwatching, fishing, hiking, horseback riding, ice skating, stargazing, guided touring, water activities, camping, backpacking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad" >
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS3.jpg?v=1645349925" alt="" width="100%">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>Where</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            The park is open all year though some areas are inaccessible by car from approximately November through May. Millions of people visit Yosemite in the high season from April through October, so if you don’t want crowds, go at another time or plan a human-powered getaway into the wilderness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-box" style="margin-top: 87px;">
+
+        </div>
+
+
+
+
+        <div class="list">
+            <div class="park-box"><a href="/collections/joshua-tree/products/stand-collar-fleece-vest"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS3.jpg?v=1645349925" alt="" />
+                    <div class="product-desc">
+                        <p class="name">Fleece Vest</p>
+                        <p>$65.00</p>
+                        <p class="desc">Wherever your adventures take you, this vest will be along for the ride. Soft
+                            shearling on the outside with core-warming cashmere on the inside. Layer it under a jacket
+                            for cold weather action, or wear it on its own. This full zip, sleeveless vest is finished
+                            with side flap pockets and inner pockets to stash all your goods.</p>
+                        <div class="colors">
+                            <div><i class="green"></i></div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a href="/collections/joshua-tree/products/outdoor-pocket-shirt"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS1.jpg?v=1645349925" alt="" />
+                    <div class="product-desc">
+                        <p class="name">Outdoor Pocket Shirt</p>
+                        <p>$56.00</p>
+                        <p class="desc">A 100% cotton button down designed for the outdoors. This slim fit shirt is
+                            lightweight and comfortable. Perfect for climbing, hiking or camping.</p>
+                        <div class="colors">
+                            <div><i class="green"></i></div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/joshua-tree/products/mens-outdoor-multifunctional-trousers-with-belt-1"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/JS2.jpg?v=1645349925" alt="" />
+                    <div class="product-desc">
+                        <p class="name">Adventure Cuffed Pants with Belt</p>
+                        <p>$135.00</p>
+                        <p class="desc">The most rugged pant in our line. These wear-resistant work pants are built with
+                            100% cotton Ripstop. The knees, seams and tape measure clips are all reinforced to enhance
+                            durability. Relaxed fit tailoring ensures these pants move with you, no matter how active
+                            you are. Crafted with multi-use pockets to store all of your tools, gadgets and personal
+                            effects.</p>
+                        <div class="colors">
+                            <div><i class="green"></i></div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+        </div>
+    </div>
+</div>

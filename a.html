@@ -1,0 +1,354 @@
+<style>
+    p,
+    ul,
+    li,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #park #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #park #mainContent .section-header {
+        display: none;
+    }
+
+    #park #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #park #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #park #mainContent img {
+        border-radius: 0;
+    }
+
+    #park #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .txt {
+        text-align: center;
+        max-width: 1060px;
+        margin: 60px auto;
+        font-size: 34px;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 72px;
+        margin-bottom: 50px;
+        color: black;
+    }
+
+    .park-content .banner .desc {
+        font-size: 28px;
+        color: black;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content {
+        max-width: 1920px;
+    }
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content p {
+        margin-bottom: 0;
+    }
+
+    .guide {
+        background-color: #000;
+        padding: 20px 0 20px 120px;
+
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+    }
+
+    .guide p {
+        font-size: 16px;
+    }
+
+    .guide ul {
+        list-style: none;
+        margin-left: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .guide ul li {
+
+
+        text-align: center;
+        /* margin-top: 15px; */
+        background-color: #343434;
+
+
+    }
+
+    .guide ul a {
+        display: block;
+        padding: 4px 10px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .park-content .page-content h3 {
+        font-size: 44px;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .park-content .page-content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+
+        max-width: 1200px;
+        margin: 0 auto 50px;
+
+    }
+
+    .park-content .page-content .park-box {
+        border: 1px solid #e5e5e5;
+        transition: all 0.5s ease 0s;
+    }
+
+    .park-content .page-content .park-box:hover {
+        transform: scale(1.06);
+
+    }
+
+    .park-content .page-content .park-box a>div {
+
+        border-top: none;
+    }
+
+    .park-content .page-content .park-box a {
+        text-decoration: none;
+
+        display: block;
+
+    }
+
+    .park-content .page-content .park-box a:hover {
+        /* transform: scale(1.06);*/
+
+    }
+
+    .park-content .page-content .park-box h4 {
+        font-size: 18px;
+        padding: 20px 20px 0px 20px;
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    .park-content .page-content .park-box p {
+        padding: 0 20px 20px 20px;
+        font-size: 14px;
+
+        color: #000;
+    }
+
+    .park-content .banner picture {
+        display: flex;
+    }
+
+    @media screen and (max-width: 769px) {
+
+        .park-content .banner .txtContent .title {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .park-content .banner .txtContent .desc {
+            font-size: 14px;
+            padding: 0 10px;
+            color: black;
+        }
+
+        .park-content .page-content .list {
+            grid-template-columns: 1fr;
+            padding: 0 20px 30px;
+            gap: 15px;
+        }
+
+        .park-content .page-content .park-box h4 {
+            font-size: 18px;
+            padding: 10px 10px 0px;
+        }
+
+        .park-content .page-content .park-box p {
+            padding: 0 10px 20px 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .guide {
+            padding-left: 15px;
+            display: block;
+        }
+
+        .guide p {
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+
+        .guide ul {
+            margin-left: 0;
+
+        }
+
+        .guide ul li {}
+
+        .guide ul a {
+            font-size: 12px;
+            padding: 5px 10px;
+
+        }
+
+        .park-content .page-content h3 {
+            font-size: 28px;
+            padding: 30px 0;
+        }
+
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/parkbanner2.jpg?v=1645409632" /> <img
+                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/park_m.jpg?v=1645423453" alt="" /></picture>
+        <div class="txtContent">
+            <p class="desc"> </p>
+            <p class="desc"> </p>
+            <p class="desc">These are some of the places we love (and recommend) for your future trips. Our mission at
+                Monster Valley is to support and get you ready to enjoy the wonders of the outdoors. Share your ideas,
+                experiences, and photos to be featured here!</p>
+            <p class="desc"> </p>
+            <p class="desc"> </p>
+        </div>
+    </div>
+    <div class="guide">
+        <ul>
+            <li><a href="#">ALL</a></li>
+            <li><a href="#tree">Joshua Tree</a></li>
+            <li><a href="#fjords">The Fjords</a></li>
+            <li><a href="#yosemite">Yosemite</a></li>
+            <li><a href="#alaska">Alaska</a></li>
+            <li><a href="#appalachian">Appalachian</a></li>
+            <li><a href="#grand">Grand Canyon</a></li>
+            <li><a href="#safari">Kruger Safari</a></li>
+            <li><a href="#everglades">Everglades</a></li>
+            <li><a href="#volcanos">Costa Rican Volcanos</a></li>
+        </ul>
+    </div>
+    <div class="page-content">
+        <h3>Adventure Guide</h3>
+        <div class="list">
+            <div class="park-box" id="tree"><a href="/pages/joshua-tree-1"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/jst.jpg?v=1646234099" alt="" />
+                    <div>
+                        <h4>Joshua TreE</h4>
+                        <p>Explore Joshua Tree on this one day adventure.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="fjords"><a href="/pages/the-fjords"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/TF.jpg?v=1645239476" alt="" />
+                    <div>
+                        <h4>The Fjords</h4>
+                        <p>Ride and explore the largely untouched Lyngen Alps for some of the best views and terrain
+                            Norway has to offer.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="yosemite"><a href="/pages/yosemite"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/YM.jpg?v=1645240912" alt="" />
+                    <div>
+                        <h4>Yosemite</h4>
+                        <p>Learn the essentials of alpine mountaineering on the north side of Yosemite.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="alaska"><a href="/pages/alaska"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/AS.jpg?v=1645243258" alt="" />
+                    <div>
+                        <h4>Alaska</h4>
+                        <p>Experience Alaska’s steep and deep and look out for the Northern Lights.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="appalachian"><a href="/pages/appalachian"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/AP.jpg?v=1645244879" alt="" />
+                    <div>
+                        <h4>Apalachian</h4>
+                        <p>Bike and explore historic ruins on this guided beginner mountain bike tour inside Grand
+                            Canyon.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="grand"><a href="/pages/grand-canyon"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/GC.jpg?v=1645245707" alt="" />
+                    <div>
+                        <h4>Grand Canyon</h4>
+                        <p>Explore Grand Canyon by mountain bike.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="safari"><a href="/pages/kruger-safari"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/KS.jpg?v=1645246800" alt="" />
+                    <div>
+                        <h4>Kruger Safari</h4>
+                        <p>It perfectly maintains the natural environment and ecological balance of this area.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="everglades"><a href="/pages/everglades"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/EG.jpg?v=1645249329" alt="" />
+                    <div>
+                        <h4>Everglades</h4>
+                        <p>Hotel stays are best between March to May and June to November.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="volcanos"><a href="/pages/costa-rican-volcanos"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/CRV.jpg?v=1645250363" alt="" />
+                    <div>
+                        <h4>Costa Rican Volcanos</h4>
+                        <p>Explore the volcanos at your own pace, in your own campervan.</p>
+                    </div>
+                </a></div>
+            <div class="park-box" id="forrest"><a href="/pages/amazon-forrest"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/AF.jpg?v=1645246479" alt="" />
+                    <div>
+                        <h4>Amazon Forrest</h4>
+                        <p>Immerse yourself in another world with the indigenous tribes of Amazon Forest.</p>
+                    </div>
+                </a></div>
+        </div>
+    </div>
+</div>
