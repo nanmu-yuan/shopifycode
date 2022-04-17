@@ -1,4 +1,11 @@
 <style>
+      p,
+    ul,
+    li,
+    div {
+        margin: 0;
+        padding: 0;
+    }
     #mainContent .wrapper {
 
         max-width: none;
@@ -9,14 +16,24 @@
         display: none;
     }
 
-    #mainContent .wrapper .grid {
+     #mainContent .wrapper .grid {
         margin-left: 0;
     }
 
-    #mainContent .wrapper .grid__item {
+     #mainContent .wrapper .grid__item {
         left: 0;
         flex: 0 0 100%;
         padding-left: 0;
+    }
+    .rte{
+        margin-bottom: 0px;
+    }
+    .ispc {
+        display: block;
+    }
+
+    .ismobile {
+        display: none;
     }
 
     #park #mainContent img {
@@ -31,46 +48,115 @@
         padding-top: 0;
         padding-bottom: 0;
     }
-
-    .park-content .banner-box {
-       position: relative;
-       color: #fff;
+    .park-content{
+        background-color: #f9f9f9;
     }
-    .park-content .banner-box .banner{
-        width: 1440px;
+    .park-content .banner {
+        position: relative;
+        color: #fff;
         margin: 0 auto;
     }
-    .park-content .banner-box .banner img{
+    .park-content .banner img{
         width: 100%;
     }
-    .park-content .banner-box .banner .title {
-        font-size: 72px;
-        margin-bottom: 50px;
-        color: black;
+    .park-content .banner picture{
+        width: 100%;
+    }
+    .park-content .banner .title {
+        font-size: 60px;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 900;
     }
 
-    .park-content .banner-box  .banner .desc {
-        font-size: 28px;
-        color: black;
+    .park-content .banner .desc {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        padding: 0 257px;
     }
 
-    .park-content .banner-box .banner .txtContent {
+    .park-content .banner .txtContent {
         position: absolute;
-        top: 50%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
         max-width: 1200px;
         text-align: center;
     }
+
     .page-content {
-        max-width: 1440px;
+        background-color: #f9f9f9;
     }
-    .img-list-box{
+
+    .guide{
+        height:101px;
+        max-width: 1440px;
+        position:absolute;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+
+    }
+    .guide-mask{
+        
+        position: absolute;
+        bottom: 5px;
+        top: 0;
+        width: 100%;
+        background-color: #000;
+        opacity: 0.45;
+    }
+    .guide-list{
+        display: flex;
+        align-items: center;
+        padding: 0px 21%;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    .guide p {
+        font-size: 16px;
+    }
+
+    .guide ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 11px;
+        justify-content: center;
+    }
+
+    .guide ul li {
+
+
+        text-align: center;
+        /* margin-top: 15px; */
+        background-color: #000;
+        opacity: 1;
+
+
+    }
+
+    .guide ul a {
+        display: block;
+        padding: 4px 10px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .img-list-box {
         max-width: 1308px;
         margin: 0 auto;
         margin-top: 48px;
+        padding-bottom: 105px;
     }
+
     .list {
         width: 100%;
         display: flex;
@@ -99,7 +185,6 @@
     }
 
     .park-box {
-        border: 1px solid #e5e5e5;
         transition: all 0.5s ease 0s;
     }
 
@@ -115,36 +200,128 @@
     .img-title {
         font-size: 42px;
         color: #fff;
+        position: relative;
+        bottom: 140px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        height: 110px;
+        justify-content: center;
+        flex-direction: column;
     }
 
-    @media screen and (max-width: 769px) {}
+    @media screen and (max-width: 769px) {
+
+        .ispc {
+            display: none;
+        }
+
+        .ismobile {
+            display: block;
+        }
+        .park-content .banner {
+        position: relative;
+        color: #fff;
+        max-width: 769px;
+        margin: 0 auto;
+    }
+    .park-content .banner img {
+        width: 100%;
+    }
+    .park-content .banner picture{
+        width: 100%;
+    }
+    .park-content .banner .title {
+        font-size: 30px;
+        margin-bottom: 5px;
+        color: #fff;
+        font-weight: 900;
+    }
+
+    .park-content .banner .desc {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        padding: 0 5%;
+        line-height: 1.2;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 768px;
+        text-align: center;
+    }
+        .park-content .page-content .list {
+            grid-template-columns: 1fr;
+            padding: 0 20px 30px;
+            gap: 15px;
+        }
+
+        .park-content .page-content .park-box h4 {
+            font-size: 18px;
+            padding: 10px 10px 0px;
+        }
+
+        .park-content .page-content .park-box p {
+            padding: 0 10px 20px 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .guide {
+            display: none;
+        }
+
+        .park-content .page-content h3 {
+            font-size: 28px;
+            padding: 30px 0;
+        }
+    }
 </style>
 <div class="park-content">
-    <div class="banner-box">
-        <div class="banner">
-            <picture>
-                <source media="(min-width:769px)"
-                    srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/parkbanner2.jpg?v=1645409632" /> <img
-                    src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/park_m.jpg?v=1645423453" alt="" /></picture>
-            <div class="txtContent">
-                <p class="desc"> </p>
-                <p class="desc"> </p>
-                <p class="desc">These are some of the places we love (and recommend) for your future trips. Our mission at
-                    Monster Valley is to support and get you ready to enjoy the wonders of the outdoors. Share your ideas,
-                    experiences, and photos to be featured here!</p>
-                <p class="desc"> </p>
-                <p class="desc"> </p>
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/5_1090b532-6c3e-4cd8-8d82-d11941bad62f.png?v=1650116868" />
+            <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/6.png?v=1650117024" alt="" /></picture>
+        <div class="txtContent">
+            <p class="title">Plasces we Love</p>
+            <p class="desc">These are some of the places we love (and recommend) for your future trips. Our mission at
+                Monster Valley is to support and get you ready to enjoy the wonders of the outdoors. Share your ideas,
+                experiences, and photos to be featured here!</p>
+        </div>
+        <!-- <div class="guide-mask"></div> -->
+        <div class="guide" >
+            <div class="guide-list">
+                <ul style="position:relative;">
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#tree">Joshua Tree</a></li>
+                    <li><a href="#fjords">The Fjords</a></li>
+                    <li><a href="#yosemite">Yosemite</a></li>
+                    <li><a href="#alaska">Alaska</a></li>
+                    <li><a href="#appalachian">Appalachian</a></li>
+                    <li><a href="#grand">Grand Canyon</a></li>
+                    <li><a href="#safari">Kruger Safari</a></li>
+                    <li><a href="#everglades">Everglades</a></li>
+                    <li><a href="#volcanos">Costa Rican Volcanos</a></li>
+                </ul>
             </div>
+            <div class="guide-mask"></div>
         </div>
     </div>
-    <div class="img-list-box">
+
+    <div class="img-list-box ispc">
         <div class="list">
             <div class="park-box" id="tree" style="margin-right: 25px;">
                 <div class="park-bg-1">
                     <a href="">
                         <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649939723827.png" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 100px;">JOSHUA TREE</span>
+                        <span class="img-title">JOSHUA TREE</span>
                     </a>
                 </div>
             </div>
@@ -153,7 +330,7 @@
                     <div class="park-bg-2">
                         <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649935344277.png" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 100px;">THE FJORDS</span>
+                        <span class="img-title" >THE FJORDS</span>
                     </div>
                 </a>
             </div>
@@ -162,18 +339,18 @@
             <div class="park-box" id="tree" style="margin-right: 28px;">
                 <a href="">
                     <div class="park-bg-3">
-                        <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649935344277.png" width="100%"
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/bigstock-Illuminated-Yosemite-Valley-Vi-390832019.png?v=1650163878" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 319px;">#YOSEMITE#</span>
+                        <span class="img-title">YOSEMITE</span>
                     </div>
                 </a>
             </div>
             <div class="park-box" id="tree" style="margin-right: 25px;">
                 <a href="">
                     <div class="park-bg-3">
-                        <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649935344277.png" width="100%"
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1c1f9fbe817a36136655145.jpg_600_0_3_0d81.png?v=1650164101" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 319px;">#YOSEMITE#</span>
+                        <span class="img-title" >ALASKA</span>
                     </div>
 
                 </a>
@@ -181,9 +358,9 @@
             <div class="park-box" id="tree">
                 <a href="">
                     <div class="park-bg-3">
-                        <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649935344277.png" width="100%"
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/510.png?v=1650164198" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 319px;">#YOSEMITE#</span>
+                        <span class="img-title" >APPALACHIAN</span>
                     </div>
                 </a>
             </div>
@@ -192,20 +369,19 @@
             <div class="park-box" id="tree" style="margin-right: 28px;">
                 <a href="">
                     <div class="park-bg-2">
-                        <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649935344277.png" width="100%"
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/508.png?v=1650164278" width="100%"
                             height="100%" alt="">
-                        <div
-                            style="text-align: center;color: #fff; font-size: 42px;padding: 0 20px;position:relative;word-wrap: break-word;bottom: 250px;">
-                            #GRAND CANYON#</div>
+                        <span class="img-title">
+                            GRAND CANYON</span>
                     </div>
                 </a>
             </div>
             <div class="park-box" id="tree">
                 <a href="">
                     <div class="park-bg-1">
-                        <img src="http://sources.aopcdn.com/edm/images/kokorou/20220414/1649939723827.png" width="100%"
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/istockphoto-921058184-612x612.png?v=1650164344" width="100%"
                             height="100%" alt="">
-                        <span class="img-title" style="position: relative; bottom: 231px;">#GRAND CANYON#</span>
+                        <span class="img-title" >KRUGER SAFARI</span>
                     </div>
                 </a>
             </div>
@@ -214,25 +390,170 @@
             <div class="park-box" id="tree" style="margin-right: 28px;">
                 <a href="">
                     <div class="park-bg-3">
-                        <div
-                            style="text-align: center;color: #fff; font-size: 42px;padding: 0 20px;position:relative;word-wrap: break-word;top: 450px;">
-                            #EVERGLADES#</div>
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/492_1.png?v=1650164457" width="100%"
+                        height="100%" alt="">
+                        <span class="img-title" >EVERGLADES</span>
                     </div>
                 </a>
             </div>
             <div class="park-box" id="tree" style="margin-right: 28px;">
-                <div class="park-bg-3">
-                    <div
-                        style="text-align: center;color: #fff; font-size: 42px;padding: 0 20px;position:relative;word-wrap: break-word;top: 428px;">
-                        #COSTA RICAN VOLCANOS#</div>
-                </div>
+                <a href="">
+                    <div class="park-bg-3">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/439.png?v=1650164649" width="100%"
+                        height="100%" alt="">
+                        <span class="img-title" >COSTA RICAN VOLCANOS</span>
+                    </div>
+                </a>
             </div>
-            <div class="park-box" id="tree">
-                <div class="park-bg-3">
-                    <div
-                        style="text-align: center;color: #fff; font-size: 42px;padding: 0 20px;position:relative;word-wrap: break-word;top: 428px;">
-                        #AMAZON FORREST#</div>
-                </div>
+            <div class="park-box" id="tree" style="margin-right: 28px;">
+                <a href="">
+                    <div class="park-bg-3">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/494.png?v=1650164739" width="100%"
+                        height="100%" alt="">
+                        <span class="img-title" >AMAZON FORREST</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <style>
+        .img-list-box-moblie{
+            margin-top: 9px;
+            overflow: hidden;
+        }
+        .img-list-box-moblie a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .mobile-list1{
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 4%;
+           
+        }
+        .mobile-list2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 0 4%;
+
+        }
+        .mobile-list1 img{
+            width: 100%;
+        }
+        .mobile-list2 img{
+            width: 100%;
+        }
+        .list-box{
+            position: relative;
+        }
+        .mobile-img-title{
+            position:absolute;
+            display: flex;
+            bottom: 5%;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .mobile-img-title p {
+            padding: 0 5%;
+        }
+    </style>
+    <div class="img-list-box-moblie  ismobile">
+        <div class="mobile-list1">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/913068642_1_1.png?v=1650176000" alt="">
+                    <div class=mobile-img-title>
+                        <p>JOSHUA TREE</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-list2">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/bigstock-Illuminated-Yosemite-Valley-Vi-390832019_1.png?v=1650178625"  alt="">
+                    <div class=mobile-img-title>
+                        <p>YOSEMITE</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1c1f9fbe817a36136655145.jpg_600_0_3_0d81_1.png?v=1650188363"  alt="">
+                    <div class=mobile-img-title>
+                        <p>ALASKA</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-list1">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/495.png?v=1650188699" alt="">
+                    <div class=mobile-img-title>
+                        <p>KRUGER SAFARI</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-list2">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/520.png?v=1650188795"  alt="">
+                    <div class=mobile-img-title>
+                        <p>APPALACHIAN</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/519.png?v=1650188880" alt="">
+                    <div class=mobile-img-title>
+                        <p>EVERGLADES</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-list2">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/524.png?v=1650188953"   alt="">
+                    <div class=mobile-img-title>
+                        <p>GRAND CANYON</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/523.png?v=1650189009" alt="">
+                    <div class=mobile-img-title>
+                        <p>THE FJORDS</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-list2">
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/500.png?v=1650189062" alt="" />
+                    <div class=mobile-img-title>
+                        <p>COSTA RICAN VOLCANOS</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-box">
+                <a href="#">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/499.png?v=1650189102" alt="" />
+                    <div class=mobile-img-title>
+                        <p>AMAZON FORREST</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
