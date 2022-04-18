@@ -1,0 +1,483 @@
+<style>
+    p,
+    ul,
+    li,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #mainContent .section-header {
+        display: none;
+    }
+
+    #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #mainContent img {
+        border-radius: 0;
+    }
+
+    #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #mainContent .wrapper .grid__item #contact_form {
+        max-width: 1520px;
+        margin: 0 auto;
+        padding: 4% 7%;
+        padding-top: 0px;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-weight: 500;
+    }
+
+    .park-content .banner .desc {
+        font-size: 40px;
+        font-weight: 900;
+
+    }
+
+    .park-content .banner .info {
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content .page-content {
+        max-width: 1520px;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .title-box1-work {
+        padding: 4% 23%;
+        background: #f8f8f8;
+    }
+
+    .work-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    .work-info .info-item {
+        display: flex;
+        height: 200px;
+    }
+
+    .work-info .info-item .item-icon {
+        height: 100%;
+        width: 110px;
+        background-color: #e9e9e9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .work-info .info-item .item-icon img {
+        width: 34px;
+        height: 70px;
+        margin-left: 43px;
+        border: 2px dashed #999;
+    }
+
+    .work-info .info-item .item-info {
+        height: 100%;
+        width: 100%;
+    }
+
+    .work-info .info-item .item-info p {
+        height: 100%;
+        padding-left: 54px;
+        font-size: 24px;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 74px;
+    }
+
+    .title-box2-faqs {
+        padding: 4% 7%;
+        font-size: 20px;
+        color: #272727;
+        background: #f8f8f8;
+    }
+
+    .faqs-info .faqs-info-q {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 18px 0;
+    }
+
+    .list-box {
+        padding: 4% 7%;
+        padding-bottom: 0;
+    }
+
+    .list-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-title-box {
+        padding: 4% 7%;
+    }
+
+    .form-title-box .form-title {
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .ismobile{
+            display: none;
+        }
+    @media screen and (max-width: 769px) {
+        .ismobile{
+            display: block;
+        }
+        .park-content .page-content {
+            max-width: 769px;
+            margin: auto;
+            background: #fff;
+            margin-top: 31px;
+            padding-bottom: 0px;
+        }
+
+        #mainContent .wrapper .grid__item #contact_form {
+            position: relative;
+            max-width: 768px;
+            padding: 5% 5%;
+            background: #eee;
+        }
+
+        #mainContent .wrapper .grid__item #contact_form input {
+            background: #ddd;
+        }
+
+        .park-content .banner .title {
+            font-size: 36px;
+            padding: 0 12%;
+            line-height: 1.2;
+            font-weight: 900;
+        }
+
+        .park-content .banner .desc,
+        .park-content .banner .info {
+            display: none;
+        }
+
+        .rte {
+            margin-bottom: 0;
+        }
+
+        .park-content .page-content {
+            max-width: 768px;
+            margin: auto;
+        }
+
+        .title-box1-work {
+            padding: 4% 6%;
+            background: #eee;
+        }
+
+        .work-title {
+            font-size: 18px;
+            text-align: left;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .work-info .info-item {
+            display: flex;
+            height: 200px;
+        }
+
+        .work-info .info-item .item-icon {
+            height: 100%;
+            width: 110px;
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .work-info .info-item .item-icon img {
+            width: 34px;
+            height: 70px;
+            margin-left: 16px;
+            border: 2px dashed #999;
+        }
+
+        .work-info .info-item .item-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .work-info .info-item .item-info p {
+            height: 100%;
+            padding-left: 2px;
+            font-size: 16px;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-right: 2px;
+        }
+
+        .title-box2-faqs {
+            padding: 4% 7%;
+            font-size: 16px;
+            color: #272727;
+            background: #eee;
+        }
+
+        .faqs-info .faqs-info-q {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 18px 0;
+        }
+
+        .list-box {
+            padding: 4% 7%;
+            padding-bottom: 15px;
+            background-color: #eee;
+        }
+
+        .list-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-title-box {
+            padding: 4% 7%;
+            background-color: #eee;
+        }
+
+        .form-title-box .form-title {
+            font-size: 22px;
+            font-weight: 900;
+            text-align: left;
+            margin-bottom: 0px;
+        }
+
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/504_2.png?v=1650245841" />
+            <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/505.png?v=1650245988" alt="" />
+        </picture>
+        <div class="txtContent">
+            <p class="title">Affiliate Program</p>
+            <p class="desc">Are you an outdoor explorer? Come and join the Monster Valley Club! </p>
+            <p class="info">Our Monster Valley Club is rooted in a vision to expand our community and empower new
+                voices. We’re
+                searching for ambassadors who are inspired by the mountains, and identify as tour guides and outdoor
+                sports coaches who are passionate about their community</p>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="title-box1-work ismobile">
+            <p class="work-title"> Are you an outdoor explorer?
+                Come and join the Monster Valley Club!</p>
+            <div class="mobile-title-info">
+                <p>
+                    Our Monster Valley Club is rooted in a vision to expand our community and empower new voices. We’re
+                    searching for ambassadors who are inspired by the mountains, and identify as tour guides and outdoor
+                    sports coaches who are passionate about their community. We offer special benefits to our members
+                    which incluedes monthly gift card and exclusive discount code. Our members can enjoy our latest
+                    products every month and earn commission by showing their customers.
+                </p>
+            </div>
+        </div>
+        <div class="title-box1-work">
+            <p class="work-title">How does it work?</p>
+            <div class="work-info">
+                <div class="info-item">
+                    <div class="item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/111.png?v=1650252023" alt="" />
+                    </div>
+                    <div class="item-info">
+                        <p>
+                            Share your Monster Valley products and discount code to your customers
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="item-icon">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/222.png?v=1650259092"
+                            alt="" />
+                    </div>
+                    <div class="item-info">
+                        <p>
+                            Earn commission on every qualifying purchase your customers make through your code
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="item-icon">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/333.png?v=1650259128"
+                            alt="" />
+                    </div>
+                    <div class="item-info">
+                        <p>
+                            Cash out every two weeks
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-box2-faqs">
+            <p class="work-title">FAQS</p>
+            <div class="faqs-info">
+                <p class="faqs-info-q">Q) Who can become a Monster Valley Ambassador?</p>
+                <p>A) If you are working as local guide or outdoor sports coach, you are eligible to apply to become a
+                    Monster Valley Ambassador.</p>
+                <p class="faqs-info-q">Q) How do I get my monthly package?</p>
+                <p>A) We will send you gift cards monthly whic</p>
+                <p class="faqs-info-q">
+                    Q) Is there a follower count requirement to join?
+                </p>
+                <p>A) We do not have a follower count requirement as we want everyone to feel welcome to join our
+                    Monster Valley community.
+                </p>
+                <p class="faqs-info-q">Q) How do I get paid for the sales I bring in?
+                </p>
+                <p>A) We're making the payment process super easy by sharing Monster Valley discount code! Essentially,
+                    you'll earn 20% commission on every qualifying purchase made via your code. Commissions will be paid
+                    in United States Dollars via Paypal approximately 14 days following the end of each calendar month
+                    in which they were earned.</p>
+            </div>
+        </div>
+        <div class="list-box">
+            <div class="list-row">
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649761986.png?v=1650261886"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649761950.png?v=1650262025"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762124.png?v=1650262083"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762022.png?v=1650262120"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762094.png?v=1650262252"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649843664.png?v=1650262787"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762040.png?v=1650262828"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762133.png?v=1650262867"
+                            alt="" />
+                    </a>
+                </div>
+
+
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649843585.png?v=1650262912"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649843641.png?v=1650262953"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762077.png?v=1650262992"
+                            alt="" />
+                    </a>
+                </div>
+                <div class="list-row-item">
+                    <a href="#">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0598/7955/5231/files/1649762049.png?v=1650263165"
+                            alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="form-title-box">
+            <p class="form-title"> COME JOIN US NOW</p>
+        </div>
+    </div>
+</div>
