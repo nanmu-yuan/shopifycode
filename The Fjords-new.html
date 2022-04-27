@@ -1,0 +1,777 @@
+<style>
+    #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #mainContent .section-header {
+        display: none;
+    }
+
+    #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #mainContent img {
+        border-radius: 0;
+    }
+
+    #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .rte {
+        margin-bottom: 0px;
+    }
+
+    .txt {
+        text-align: center;
+        max-width: 1060px;
+        margin: 60px auto;
+        font-size: 34px;
+    }
+
+    .park-content {
+        background: #f9f9f9;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 72px;
+        margin-bottom: 50px;
+    }
+
+    .park-content .banner .desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .park-content .banner .info {
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .park-content .banner .info>div:first-child {
+        margin-right: 60px;
+    }
+
+    .park-content .banner .info img {
+        width: 23px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: text-top;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content .page-content {
+        max-width: 1300px;
+        margin: auto;
+        margin-top: 31px;
+        padding-bottom: 200px;
+    }
+
+    .park-content .page-content h3 {
+        font-size: 48px;
+        padding: 70px 0 35px;
+        text-align: center;
+    }
+
+    .park-content .page-content .sub {
+        padding-bottom: 40px;
+        font-size: 26px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .park-content .page-content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 45px;
+        padding-top: 50px;
+
+    }
+
+    .park-content .page-content .park-box .product-desc {
+        background-color: #efefef;
+        padding: 14px;
+        padding-bottom: 30px;
+    }
+
+    .park-content .page-content .park-box .product-desc .desc {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 61px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors>div {
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 3px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors i {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .park-content .page-content .park-box a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
+    .park-content .page-content .park-box .btn {
+        background-color: #000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #fff;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    .park-content .banner picture {
+        display: flex;
+    }
+
+    .title-box1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 35px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 {
+        font-size: 18px;
+        color: #000;
+        line-height: 30px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 h2 {
+        text-align: center;
+    }
+
+    .title-list-item {
+        background: #FFFFFF;
+        border-radius: 10px 10px 10px 10px;
+        opacity: 1;
+    }
+
+    .item-pad {
+        padding: 27px;
+    }
+
+    .title-list-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 141px;
+        background-color: #eee;
+    }
+
+    .title-list-item-font {
+        font-size: 18px;
+        font-weight: normal;
+        color: #000000;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .title-list-item-icon {
+        width: 45px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .title-list-item-icon img {
+        height: 100%;
+    }
+
+    .title-list-item-bigfont {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .banner-img {
+        margin: 0 auto;
+        position: relative;
+        margin-top: 39px;
+    }
+
+    .banner-img .banner-img-title-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .banner-img-title-box p {
+        color: #fff;
+        font-size: 48px;
+    }
+
+    .title-b {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .product-desc .name {
+        font-size: 22px;
+        font-weight: 900;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .product-desc .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        font-weight: 400;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .price-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+        margin-top: 8px;
+    }
+
+    .list .park-box .price-box p {
+        font-size: 22px;
+        color: #000;
+        font-weight: normal;
+    }
+
+    .pc-show {
+        display: block;
+    }
+
+    .mobile-show {
+        display: none;
+    }
+
+    @media screen and (max-width: 769px) {
+        .park-content .page-content {
+            max-width: 769px;
+            margin: auto;
+            background: #fff;
+            margin-top: 31px;
+            padding-bottom: 45px;
+        }
+
+        .rte {
+            margin-bottom: 0;
+        }
+
+        .pc-show {
+            display: none;
+        }
+
+        .mobile-show {
+            display: block;
+        }
+
+        .park-content .page-content {
+            background-color: #eee;
+        }
+
+        .park-content .page-content .title-list-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            padding: 0 8px;
+        }
+
+        .park-content .page-content {
+            margin-top: 0;
+        }
+
+        .title-box1 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 8px 18px
+        }
+
+        .title-box2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 12px 18px
+        }
+
+        .item-pad {
+            padding: 4px;
+        }
+
+        .title-list-item-icon {
+            width: 36px;
+            height: 34px;
+            margin: 0 auto;
+        }
+
+        .title-list-item-icon img {
+            height: 100%;
+        }
+
+        .title-list-item {
+            background: #FFFFFF;
+            border-radius: 10px 10px 10px 10px;
+            opacity: 1;
+        }
+
+        .title-list-item-bigfont {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .title-list-item-font {
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal
+        }
+
+        .park-content .banner .txtContent .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .park-content .banner .info {
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .park-content .banner .info>div:first-child {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .park-content .banner .txtContent .desc {
+            font-size: 14px;
+            padding: 0 10px;
+            line-height: 22px;
+        }
+
+        .park-content .page-content .list {
+            grid-template-columns: 1fr 1fr;
+            padding: 0 8px 30px;
+            gap: 15px;
+        }
+
+        .banner-img-title-box p {
+            color: #fff;
+            font-size: 48px;
+        }
+
+        .product-desc .name {
+            font-size: 16px;
+            font-weight: 900;
+            color: #000000;
+        }
+
+        .product-desc .desc {
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .park-content .page-content .park-box .product-desc {
+            background-color: #efefef;
+            padding: 8px;
+            padding-bottom: 12px;
+        }
+
+        .price-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .banner-img {
+            margin-bottom: 41px;
+        }
+
+        .list .park-box .price-box p {
+            font-size: 16px;
+            color: #000;
+            font-weight: normal;
+        }
+
+        .park-content .page-content .park-box .btn {
+            background-color: #000;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #fff;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0;
+        }
+
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/the_fjords-1.jpg?v=1650442337" /> <img
+                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/the_fjords.jpg?v=1650442389" alt="" />
+        </picture>
+        <div class="txtContent">
+            <p class="title">THE FJORDS</p>
+            <p class="desc"> </p>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="title-box1">
+            <p>
+                The towering peaks of the Lyngen Alps jut straight out of the sea, forming one of the most spectacular
+                mountain ranges in the world. Along the folded coastline, fjords, valleys, bays, and glaciers burst with
+                the geological and biological wonders of the Arctic. Winter or summer, you’ll find amazing natural
+                places to see and explore.
+            </p>
+        </div>
+        <div class="title-list-box">
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/1_42e84513-5930-412e-b4f2-db9bb2001d83.png?v=1650092760"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>Where</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            East of the city of Tromsø in northeastern Troms county, Norway
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/lvyou_ico.png?v=1650092729"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>What to do</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            hiking, mountaineering, kayaking, boating, mountain biking, fishing, ski and snowboard
+                            touring, cross-country skiing, snowshoeing, dog sledding, snowmobiling, ice climbing,
+                            wildlife viewing, night sky watching
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/ac217c28e264ba5248641237deb6d259.png?v=1650092662"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>When to go</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            Activities abound in the Lyngen Alps all year, so what you want to do will dictate when to
+                            go. Between November and April, temperatures are usually below freezing. Spring and fall are
+                            cool, about 42°F, and summers warm up to around 54°F.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-box2 pc-show">
+            <p class="title-b">Don’t miss</p>
+            <p> Go backcountry skiing or snowboarding and tour from sea to summit to sea. Many favorite routes allow for
+                access by boat so you’ll also enjoy a beautiful excursion through the fjords. Add to that consistently
+                good snow conditions and steep descents, and you’ve got a backcountry experience like no other.
+            </p>
+            <p>Summit one of the Lyngen Peninsula’s 124 peaks over 1000 meters (3280 feet) on foot in the summertime and
+                enjoy an exhilarating view of the fjords from your place in the clouds. At 1,833 meters (6,014 feet),
+                Jiekkevarre is the area’s highest summit.</p>
+            <p>
+                Explore the Steindal Glacier in Storfjord (or one of the other 140 glaciers on the Lyngen Peninsula).
+                The glacier has stood as sentinel above the Steindalen Valley for over 8,000 years. If you’ve never
+                walked on a glacier, be safe and hire a guide. Spot a reindeer or sea eagle. The valleys and forest
+                areas of the fjords host a rich fauna and flora. Several owl species nest here, along with moose,
+                wolverines, lynx, and mink. In the water, you may see whales, otters, and seals.
+            </p>
+            <p>
+                The Lyngenfjord area offers a plethora of mountain biking experiences. Take the ferry from Olderdalen to
+                the scenic trails in Lyngseidet, or catch the bike shuttle in Kåfjorddalen Valley for a descent from
+                2300 feet above sea level. In August, check out the singletrack festival, Skibotn Stifestival. View the
+                northern lights or the midnight sun. Walk out to Lyngstuva, the outermost point of the Lyngen Peninsula,
+                for panoramic views of the surrounding fjords and islands. It’s a perfect spot to enjoy the midnight sun
+                or the northern lights–the bivrost, as the Vikings called them.
+            </p>
+            <p class="title-b">Insider tips</p>
+            <p>Stay at the Rornes Hut above the town of Lyngseidet. This quaint cabin built by locals allows for
+                overnight or rest-stop use during your tours through the area. Rornes Hut has a phenomenal view of
+                Lyngseidet and the fjord below. Sleep under the aurora borealis in a glass igloo with a 360 degree view
+                of the landscape and sky in Spåkenes.</p>
+            <p>
+                Reduce your impact. Norway has labeled Lyngenfjord a sustainable destination, a seal of approval given
+                to destinations that work systematically to reduce the negative environmental impact of tourism. Stop in
+                Årøybukt for a visit to the world’s northernmost whisky distillery, the Aurora Spirit Distillery. Here
+                you can raise a glass surrounded by the Lyngen Alps, nearby fjords, and the northern lights. Take a side
+                trip to the Gorza Gorge Bridge. The bridge crosses a sheer canyon that reaches almost 2000 feet deep in
+                places as it guides the Guolasjohka River to the sea. The bridge provides amazing views of a 500-foot
+                waterfall, unofficially named Gorzifossen.
+            </p>
+        </div>
+        <div class="banner-img">
+            <picture>
+                <source media="(min-width:769px)"
+                    srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/502.png?v=1650095326" /> <img
+                    src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/470.png?v=1650103873" alt="" />
+            </picture>
+            <div class="banner-img-title-box">
+                <p>Clothing Guide</p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="park-box">
+                <a href="/collections/men/products/multi-pocket-drawstring-tooling-jacket?variant=41739846779039">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/668dbccc890f469dbf9bede0dab20f26_3ebc0e91-5d81-4a67-b63f-a6c4ae73b35f_720x720.jpg?v=1645955778"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Tooling Jacket">Tooling Jacket</p>
+                        <p class="desc">The most ruggedly durable jacket in our line. It is engineered with solid
+                            Sonora, which has a soft-hand-feel but is super sturdy. It's also protects against UV rays
+                            and pollutants, so don't be afraid to take it on your wildest outdoor adventures hold up.
+                            It's five pocket styling and drawstring hood give it a refined look. </p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$268.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        ADD TO CART
+                    </div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/men/products/trendy-pocket-sweats?variant=41787552202911">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/2e49fc058ed44d62af9e6c9063c14013_720x720.jpg?v=1645956746"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Trendy Pocket Sweats">Trendy Pocket Sweats</p>
+                        <p class="desc"> Cotton T-shirt, three-dimensional pocket design, multi-color options.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$35.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a
+                    href="/collections/men-pants/products/urban-functional-mountain-series-outdoor-camping-windproof-waterproof-loose-multi-pocket-pants?variant=41787637039263">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/fc791e75933f45c2ba8734d0000f15b8_720x720.jpg?v=1646995908"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Waterproof Loose Pants">Waterproof Loose Pants</p>
+                        <p class="desc">Cargo pocket trousers for outdoor and urban commuting.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$75.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/womens-new-arrival/products/washed-denim-shirt?variant=41739854938271">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/6b810e92b78b4e479a98d396212c8ad0_720x720.jpg?v=1645956244"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Washed Denim Shirt">Washed Denim Shirt</p>
+                        <p class="desc">Old West nostalgia in shirt form. We built this button down with a soft yet
+                            durable washed denim and a relaxed fit. A western yoke and button flap chest pockets add to
+                            its distinct Western look.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$39.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a
+                    href="/collections/women-tops/products/womens-lightweight-base-layer-half-zip-top?variant=41914916143263">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/7810f1b62e294f259d5e515eeedf3688_720x720.jpg?v=1645957032"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Women's Lightweight Base Layer Half-Zip Top">Women's Lightweight Base
+                            Layer Half-Zip Top</p>
+                        <p class="desc">High neck coverage with a half-zip front lets you open up for venting when
+                            you're working hard. 4-way stretch delivers a flexible range of motion. Fabric wicks
+                            moisture and dries quickly to keep you comfortable.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$29.00</p>
+                            </div>
+                            <div class="review">
+                                <p>2 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a
+                    href="/collections/womens-bottom/products/casual-five-point-pants-loose-japanese-drape-suit-shorts-men?variant=41787544993951">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/SP211112N7BV_720x720.jpg?v=1645956693"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Casual Capris Loose Shorts">Casual Capris Loose Shorts</p>
+                        <p class="desc">Pure cotton fabric, comfortable and breathable, drawstring belt design, elastic
+                            and freely adjustable. These shorts are great for spring and summer.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$35.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+        </div>
+        <div class="title-box2 mobile-show">
+            <p class="title-b">Don’t miss</p>
+            <p> Go backcountry skiing or snowboarding and tour from sea to summit to sea. Many favorite routes allow for
+                access by boat so you’ll also enjoy a beautiful excursion through the fjords. Add to that consistently
+                good snow conditions and steep descents, and you’ve got a backcountry experience like no other.
+            </p>
+            <p>Summit one of the Lyngen Peninsula’s 124 peaks over 1000 meters (3280 feet) on foot in the summertime and
+                enjoy an exhilarating view of the fjords from your place in the clouds. At 1,833 meters (6,014 feet),
+                Jiekkevarre is the area’s highest summit.</p>
+            <p>
+                Explore the Steindal Glacier in Storfjord (or one of the other 140 glaciers on the Lyngen Peninsula).
+                The glacier has stood as sentinel above the Steindalen Valley for over 8,000 years. If you’ve never
+                walked on a glacier, be safe and hire a guide. Spot a reindeer or sea eagle. The valleys and forest
+                areas of the fjords host a rich fauna and flora. Several owl species nest here, along with moose,
+                wolverines, lynx, and mink. In the water, you may see whales, otters, and seals.
+            </p>
+            <p>
+                The Lyngenfjord area offers a plethora of mountain biking experiences. Take the ferry from Olderdalen to
+                the scenic trails in Lyngseidet, or catch the bike shuttle in Kåfjorddalen Valley for a descent from
+                2300 feet above sea level. In August, check out the singletrack festival, Skibotn Stifestival. View the
+                northern lights or the midnight sun. Walk out to Lyngstuva, the outermost point of the Lyngen Peninsula,
+                for panoramic views of the surrounding fjords and islands. It’s a perfect spot to enjoy the midnight sun
+                or the northern lights–the bivrost, as the Vikings called them.
+            </p>
+            <p class="title-b">Insider tips</p>
+            <p>Stay at the Rornes Hut above the town of Lyngseidet. This quaint cabin built by locals allows for
+                overnight or rest-stop use during your tours through the area. Rornes Hut has a phenomenal view of
+                Lyngseidet and the fjord below. Sleep under the aurora borealis in a glass igloo with a 360 degree view
+                of the landscape and sky in Spåkenes.</p>
+            <p>
+                Reduce your impact. Norway has labeled Lyngenfjord a sustainable destination, a seal of approval given
+                to destinations that work systematically to reduce the negative environmental impact of tourism. Stop in
+                Årøybukt for a visit to the world’s northernmost whisky distillery, the Aurora Spirit Distillery. Here
+                you can raise a glass surrounded by the Lyngen Alps, nearby fjords, and the northern lights. Take a side
+                trip to the Gorza Gorge Bridge. The bridge crosses a sheer canyon that reaches almost 2000 feet deep in
+                places as it guides the Guolasjohka River to the sea. The bridge provides amazing views of a 500-foot
+                waterfall, unofficially named Gorzifossen.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,796 @@
+<style>
+    #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #mainContent .section-header {
+        display: none;
+    }
+
+    #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #mainContent img {
+        border-radius: 0;
+    }
+
+    #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .rte {
+        margin-bottom: 0px;
+    }
+
+    .txt {
+        text-align: center;
+        max-width: 1060px;
+        margin: 60px auto;
+        font-size: 34px;
+    }
+
+    .park-content {
+        background: #f9f9f9;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 72px;
+        margin-bottom: 50px;
+    }
+
+    .park-content .banner .desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .park-content .banner .info {
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .park-content .banner .info>div:first-child {
+        margin-right: 60px;
+    }
+
+    .park-content .banner .info img {
+        width: 23px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: text-top;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content .page-content {
+        max-width: 1300px;
+        margin: auto;
+        margin-top: 31px;
+        padding-bottom: 200px;
+    }
+
+    .park-content .page-content h3 {
+        font-size: 48px;
+        padding: 70px 0 35px;
+        text-align: center;
+    }
+
+    .park-content .page-content .sub {
+        padding-bottom: 40px;
+        font-size: 26px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .park-content .page-content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 45px;
+        padding-top: 50px;
+
+    }
+
+    .park-content .page-content .park-box .product-desc {
+        background-color: #efefef;
+        padding: 14px;
+        padding-bottom: 30px;
+    }
+
+    .park-content .page-content .park-box .product-desc .desc {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 61px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors>div {
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 3px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors i {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .park-content .page-content .park-box a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
+    .park-content .page-content .park-box .btn {
+        background-color: #000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #fff;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    .park-content .banner picture {
+        display: flex;
+    }
+
+    .title-box1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 35px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 {
+        font-size: 18px;
+        color: #000;
+        line-height: 30px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 h2 {
+        text-align: center;
+    }
+
+    .title-list-item {
+        background: #FFFFFF;
+        border-radius: 10px 10px 10px 10px;
+        opacity: 1;
+    }
+
+    .item-pad {
+        padding: 27px;
+    }
+
+    .title-list-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 141px;
+        background-color: #eee;
+    }
+
+    .title-list-item-font {
+        font-size: 18px;
+        font-weight: normal;
+        color: #000000;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .title-list-item-icon {
+        width: 45px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .title-list-item-icon img {
+        height: 100%;
+    }
+
+    .title-list-item-bigfont {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .banner-img {
+        margin: 0 auto;
+        position: relative;
+        margin-top: 39px;
+    }
+
+    .banner-img .banner-img-title-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .banner-img-title-box p {
+        color: #fff;
+        font-size: 48px;
+    }
+
+    .title-b {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .product-desc .name {
+        font-size: 22px;
+        font-weight: 900;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .product-desc .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        font-weight: 400;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .price-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+        margin-top: 8px;
+    }
+
+    .list .park-box .price-box p {
+        font-size: 22px;
+        color: #000;
+        font-weight: normal;
+    }
+
+    .pc-show {
+        display: block;
+    }
+
+    .mobile-show {
+        display: none;
+    }
+
+    @media screen and (max-width: 769px) {
+        .park-content .page-content {
+            max-width: 769px;
+            margin: auto;
+            background: #fff;
+            margin-top: 31px;
+            padding-bottom: 45px;
+        }
+
+        .rte {
+            margin-bottom: 0;
+        }
+
+        .pc-show {
+            display: none;
+        }
+
+        .mobile-show {
+            display: block;
+        }
+
+        .park-content .page-content {
+            background-color: #eee;
+        }
+
+        .park-content .page-content .title-list-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            padding: 0 8px;
+        }
+
+        .park-content .page-content {
+            margin-top: 0;
+        }
+
+        .title-box1 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 8px 18px
+        }
+
+        .title-box2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 12px 18px
+        }
+
+        .item-pad {
+            padding: 4px;
+        }
+
+        .title-list-item-icon {
+            width: 36px;
+            height: 34px;
+            margin: 0 auto;
+        }
+
+        .title-list-item-icon img {
+            height: 100%;
+        }
+
+        .title-list-item {
+            background: #FFFFFF;
+            border-radius: 10px 10px 10px 10px;
+            opacity: 1;
+        }
+
+        .title-list-item-bigfont {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .title-list-item-font {
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal
+        }
+
+        .park-content .banner .txtContent .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .park-content .banner .info {
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .park-content .banner .info>div:first-child {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .park-content .banner .txtContent .desc {
+            font-size: 14px;
+            padding: 0 10px;
+            line-height: 22px;
+        }
+
+        .park-content .page-content .list {
+            grid-template-columns: 1fr 1fr;
+            padding: 0 8px 30px;
+            gap: 15px;
+        }
+
+        .banner-img-title-box p {
+            color: #fff;
+            font-size: 48px;
+        }
+
+        .product-desc .name {
+            font-size: 16px;
+            font-weight: 900;
+            color: #000000;
+        }
+
+        .product-desc .desc {
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .park-content .page-content .park-box .product-desc {
+            background-color: #efefef;
+            padding: 8px;
+            padding-bottom: 12px;
+        }
+
+        .price-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .banner-img {
+            margin-bottom: 41px;
+        }
+
+        .list .park-box .price-box p {
+            font-size: 16px;
+            color: #000;
+            font-weight: normal;
+        }
+
+        .park-content .page-content .park-box .btn  {
+            background-color: #000;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #fff;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0;
+        }
+
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/xxx.jpg?v=1650440657" /> <img
+                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/pppp.jpg?v=1650440727" alt="" />
+        </picture>
+        <div class="txtContent">
+            <p class="title">Joshua Tree</p>
+            <p class="desc"> </p>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="title-box1">
+            <p>
+                Named after the funky trees that grow only in high desert microclimates, Joshua Tree National Park shows
+                off Mother Nature’s other-worldly desert landscapes. The mountains, rock hills, enormous boulder
+                outcroppings, oases, and unique vegetation provide an amazing natural playground for exploring.
+            </p>
+        </div>
+        <div class="title-list-box">
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/1_42e84513-5930-412e-b4f2-db9bb2001d83.png?v=1650092760"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>Where</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            Southern California, accessible from Los Angeles, San Diego, Phoenix, and Las Vegas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/lvyou_ico.png?v=1650092729"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>What to do</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            hiking, camping, rock climbing, bouldering, photography, wildlife watching, stargazing
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-list-item">
+                <div class="item-pad">
+                    <div class="title-list-item-icon">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/ac217c28e264ba5248641237deb6d259.png?v=1650092662"
+                            alt="">
+                    </div>
+                    <div class="title-list-item-bigfont">
+                        <p>When to go</p>
+                    </div>
+                    <div style="margin-top: 23px;">
+                        <p class="title-list-item-font">
+                            The park is open year-round. Temperatures are most comfortable in the spring and fall,
+                            50-85°F. Winter gets cooler with freezing nights, and summer is hot, over 100°F during the
+                            day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-box2 pc-show">
+            <p class="title-b">Don’t miss</p>
+            <p>Visit the Cholla Cactus Garden located at the meeting of the Mojave and Colorado deserts. More than a
+                thousand chollas with their fuzzy-looking spikes stretch out across the desert floor.
+            </p>
+            <p>If you’re ready for a more remote adventure, head up to Hetch Hetchy Valley in the park’s peaceful
+                northwest corner. Located at 3,900 feet, Hetch Hetchy is a hiker’s paradise full of thundering
+                waterfalls and wildflower displays in the spring. Though temperatures rise in the summer, you can cool
+                off in hidden canyons and high-country lakes.</p>
+            <p>
+                Climb the monzogranite. Joshua Tree is one of the world’s premier climbing meccas with over 8,000
+                climbing routes and 2,000 boulder problems. Giant rocks with unique formations, including cracks, slabs,
+                and steep faces, are strewn throughout the park as if the climbing gods threw them down.
+            </p>
+            <p>
+                Watch the sunset from Cap Rock or Quail Springs.
+            </p>
+            <p>
+                Check out the scenery from Keys View, a lookout point with views of the Coachella Valley, the San
+                Andreas fault line, and on a clear day, Mexico.
+            </p>
+            <p>
+                If you love wildflowers, visit in the spring. The Joshua trees bloom along with many other plants,
+                shrubs, and cactuses. The Cottonwood Spring Oasis area supports a huge variety and concentration of
+                blooming wildflowers.
+
+            </p>
+            <p>
+                The Desert View Conservation Area, just outside the park, is a 605-acre preserve for desert tortoises.
+                More secluded and quiet than Joshua Tree, the area also provides the opportunity to see other desert
+                wildlife, such as bighorn sheep, wild cats, and other reptiles.
+            </p>
+            <p>
+                The most accessible areas of Joshua Tree can get crowded, but with over 450,000 acres of designated
+                wilderness area, the park has plenty of space to explore places that most people will never see.
+            </p>
+            <p class="title-b">Insider tips</p>
+            <p>Get the lastest climbing info and meet other climbers at the park’s Climber Coffee, every Saturday and
+                Sunday morning from 8-10 a.m. from mid-October through April at Hidden Valley Campground. Meet the
+                climbing ranger and get your questions answered while enjoying a free coffee, tea, or cocoa. (BYOM:
+                Bring your own mug!)</p>
+            <p>
+                Weather can change quickly in the park. Dress in layers so you can adjust your clothes as conditions
+                change. (See our Layers Guide.)
+            </p>
+            <p>
+                This is a great place to unplug. There is no cell service in the park.
+            </p>
+            <p>
+                Bring your own water--and lots of it. Potable water is hard to find in the park.
+            </p>
+            <p>
+                If you don’t want to camp in the park, accommodations abound in the nearby town of Twentynine Palms.
+                Along with hotels and inns, you’ve got unique options like renovated trailers at Hicksville Trailer
+                Palace or poolside glamping yurts.
+            </p>
+        </div>
+        <div class="banner-img">
+            <picture>
+                <source media="(min-width:769px)"
+                    srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/502.png?v=1650095326" /> <img
+                    src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/470.png?v=1650103873" alt="" />
+            </picture>
+            <div class="banner-img-title-box">
+                <p>Clothing Guide</p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="park-box">
+                <a href="/collections/men/products/stereoscopic-pocket-zipper-patchwork-jacket?variant=41732752113823">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/f113f9d03a47496d952663cdb5172337_720x720.jpg?v=1645955914"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Stereoscopic Patchwork Jacket">Stereoscopic Patchwork Jacket</p>
+                        <p class="desc">Trusty windproof and water repellent protection you can count on. It also has an
+                            inner mesh lining to give you the breathability and sweat-wicking you need. This jacket
+                            packs in all the features from 3-D cutting and a double-layer placket to a detachable hood
+                            and five vertical pockets (including one on the arm). </p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$65.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        ADD TO CART
+                    </div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/men/products/copy-of-activewear-long-sleeve?variant=41923713499295">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/20220225-180557_720x720.jpg?v=1645957102" alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Quick-Drying Outdoor Sports Top">Quick-Drying Outdoor Sports Top</p>
+                        <p class="desc"> Everyone knows wet gear sucks, but this long sleeve shirt is bone dry within four hours. Whether you’ve been hiking in the mountains or city commuting all day, you can count on this to be ready to go the next morning. This shirt’s tech keeps your upper body temperature constant. Additionally, you’ll be looking and smelling fresh with odor-resistant and wrinkle-resistant material.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$19.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/men/products/outdoor-functional-water-repellent-black-technology-fabric-tooling-pocket-casual-military-trousers?variant=41787620982943">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/c1d1f95d87054234893e08038cc4dd82_720x720.jpg?v=1645956775" alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Anti Splash Fabric Tooling Pants">Anti Splash Fabric Tooling Pants</p>
+                        <p class="desc">Cargo pocket pants for camping and urban commuting.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$93.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/women/products/thin-and-light-windbreaker-jacket?variant=41778584158367">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/20220220_monstervalley_13938_720x720.jpg?v=1646995082" alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Thin And Light Windbreaker Jacket">Thin And Light Windbreaker Jacket</p>
+                        <p class="desc">Lightweight, breathable hooded sun protection jacket for camping and urban commuting.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$39.00</p>
+                            </div>
+                            <div class="review">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/women-tops/products/womens-skinny-sweat-wicking-base-layer-t-shirt?variant=41918440767647">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/52a398d77a374f2e9d80353cd877ff62_720x720.jpg?v=1645957093" alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Women's Skinny Sweat-Wicking Base Layer T-shirt">Women's Skinny Sweat-Wicking Base Layer T-shirt</p>
+                        <p class="desc">Soft fabric (with plenty of stretch) wicks sweat and dries fast. It's also incredibly breathable.You can take on any workout in comfort.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$25.00</p>
+                            </div>
+                            <div class="review">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+            <div class="park-box">
+                <a href="/collections/womens-bottom/products/japanese-trendy-brand-solid-color-loose-casual-sports-five-point-pants-men?variant=41787545518239">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/b34b50e65e484151a2aeddad7419c511_720x720.jpg?v=1645956701" alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Solid Color Loose Casual Sports Pants">Solid Color Loose Casual Sports Pants</p>
+                        <p class="desc" >Comfortable and breathable pure cotton fabric, elastic belt design, easy to wear and take off, suitable for daily leisure wear.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$29.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a>
+            </div>
+        </div>
+        <div class="title-box2 mobile-show">
+            <p class="title-b">Don’t miss</p>
+            <p>Visit the Cholla Cactus Garden located at the meeting of the Mojave and Colorado deserts. More than a
+                thousand chollas with their fuzzy-looking spikes stretch out across the desert floor.
+            </p>
+            <p>If you’re ready for a more remote adventure, head up to Hetch Hetchy Valley in the park’s peaceful
+                northwest corner. Located at 3,900 feet, Hetch Hetchy is a hiker’s paradise full of thundering
+                waterfalls and wildflower displays in the spring. Though temperatures rise in the summer, you can cool
+                off in hidden canyons and high-country lakes.</p>
+            <p>
+                Climb the monzogranite. Joshua Tree is one of the world’s premier climbing meccas with over 8,000
+                climbing routes and 2,000 boulder problems. Giant rocks with unique formations, including cracks, slabs,
+                and steep faces, are strewn throughout the park as if the climbing gods threw them down.
+            </p>
+            <p>
+                Watch the sunset from Cap Rock or Quail Springs.
+            </p>
+            <p>
+                Check out the scenery from Keys View, a lookout point with views of the Coachella Valley, the San
+                Andreas fault line, and on a clear day, Mexico.
+            </p>
+            <p>
+                If you love wildflowers, visit in the spring. The Joshua trees bloom along with many other plants,
+                shrubs, and cactuses. The Cottonwood Spring Oasis area supports a huge variety and concentration of
+                blooming wildflowers.
+
+            </p>
+            <p>
+                The Desert View Conservation Area, just outside the park, is a 605-acre preserve for desert tortoises.
+                More secluded and quiet than Joshua Tree, the area also provides the opportunity to see other desert
+                wildlife, such as bighorn sheep, wild cats, and other reptiles.
+            </p>
+            <p>
+                The most accessible areas of Joshua Tree can get crowded, but with over 450,000 acres of designated
+                wilderness area, the park has plenty of space to explore places that most people will never see.
+            </p>
+            <p class="title-b">Insider tips</p>
+            <p>Get the lastest climbing info and meet other climbers at the park’s Climber Coffee, every Saturday and
+                Sunday morning from 8-10 a.m. from mid-October through April at Hidden Valley Campground. Meet the
+                climbing ranger and get your questions answered while enjoying a free coffee, tea, or cocoa. (BYOM:
+                Bring your own mug!)</p>
+            <p>
+                Weather can change quickly in the park. Dress in layers so you can adjust your clothes as conditions
+                change. (See our Layers Guide.)
+            </p>
+            <p>
+                This is a great place to unplug. There is no cell service in the park.
+            </p>
+            <p>
+                Bring your own water--and lots of it. Potable water is hard to find in the park.
+            </p>
+            <p>
+                If you don’t want to camp in the park, accommodations abound in the nearby town of Twentynine Palms.
+                Along with hotels and inns, you’ve got unique options like renovated trailers at Hicksville Trailer
+                Palace or poolside glamping yurts.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <div id="contentid">
+    <p class="title-b">Don’t miss</p>
+            <p> Yosemite Valley includes the most famous attractions in the park, such as Half Dome, El Capitan, and
+                Yosemite Falls. These iconic areas are almost always busy, but they are definitely worth seeing despite
+                the crowds.
+            </p>
+            <p>If you’re ready for a more remote adventure, head up to Hetch Hetchy Valley in the park’s peaceful
+                northwest corner. Located at 3,900 feet, Hetch Hetchy is a hiker’s paradise full of thundering
+                waterfalls and wildflower displays in the spring. Though temperatures rise in the summer, you can cool
+                off in hidden canyons and high-country lakes.</p>
+            <p>
+                The Glacier Point overlook provides a breathtaking view of Yosemite Valley, Half Dome, Yosemite Falls,
+                and Yosemite’s high country. You can get there by car from late May through October or November, but the
+                road is closed once snow begins to accumulate. That just makes the trip even more fun. Strap on some
+                cross-country skis and tour 10 miles up to the viewpoint.
+            </p>
+            <p>
+                Hang out with giants. The Mariposa Grove is Yosemite’s largest ancient sequoia grove, with 500 mature
+                giant sequoias. A 4-mile, round-trip hike with 500 feet of elevation change gets you to the grove, and
+                you can continue on another 1.5 miles round trip to the 1,800-year-old Grizzly Giant and the California
+                Tunnel Tree.
+            </p>
+            <p>
+                Some consider Yosemite the rock climbing center of the universe, so do some climbing, even if you’re a
+                newbie. We can’t all be Alex Honnold, so the park offers an endless variety of challenges for every
+                level of climber. Climbing instruction and guide services are available in the park.
+            </p>
+            <p>
+                Walk through the reconstructed village of Ahwahnee and learn about the Ahwahneechee people who have
+                lived in the Yosemite area for perhaps as long as 7,000 years. Discover the wide variety of plants they
+                used for food, medicine, and making tools such as baskets, and see the ceremonial roundhouse, bark
+                houses, and sweathouse that members of the local Miwok tribes still use.
+            </p>
+            <p class="title-b">Insider tips</p>
+            <p>You can drive your car, take a shuttle, or ride your bike around the main paved roads of Yosemite.
+                Explore further by hiking, backpacking, or trying a unique wilderness mode of transportation–a mule
+                ride.</p>
+            <p>
+                A reservation will be required to drive into Yosemite during peak hours starting May 20, 2022.
+            </p>
+            <p>
+                If you’re in the park from mid- to late-February, you can catch an amazing Yosemite sight. Horsetail
+                Fall transforms into a cascade of what appears to be water on fire when it reflects the orange glow of
+                sunset. The sunset also lights up the granite walls in brilliant reds and oranges.
+            </p>
+            <p>
+                Yosemite is home to over 400 animal species, including bears. If you’re camping, pack everything that
+                has a scent—including food, soap, toothpaste, and trash—inside the bear lockers provided. Never leave
+                food or other smelly items in your car, truck bed, or roof compartment overnight. Bears can and do break
+                into cars.
+            </p>
+            <p>
+                Just outside the park, lies the town of Bodie, once a vibrant community of 10,000 residents but now a
+                ghost town preserved in a state of "arrested decay." Walk the deserted streets and explore the old
+                church, the mill, and 170 other buildings. If you’re up for mingling with ghosts, it’s best to go after
+                dark.
+            </p>
+   </div>
+</body>
+
+</html>
+<script>
+    function showmore(contentid) {
+        var len = 30;      //默认显示字数
+        var ctn = document.getElementById(contentid);  //获取div对象
+        var content = ctn.innerHTML;                   //获取div里的内容
+        content2 = content.replace(/(^s*)|(s*$)/g, "");
+        content2 = content2.replace(/<[^>]+>/g, "");//去掉所有的html标记
+
+        //alert(content);
+        var span = document.createElement("span");     //创建<span>元素
+        var a = document.createElement("a");           //创建<a>元素
+        span.innerHTML = content2.substring(0, len);     //span里的内容为content的前len个字符
+
+        a.innerHTML = content.length > len ? "... 展开" : "";  ////判断显示的字数是否大于默认显示的字数    来设置a的显示        
+        a.href = "javascript:void(0)";//让a链接点击不跳转
+
+        a.onclick = function () {
+            if (a.innerHTML.indexOf("展开") > 0) {      //如果a中含有"展开"则显示"收起"
+                a.innerHTML = "<<&nbsp;收起";
+                span.innerHTML = content;
+            } else {
+                a.innerHTML = "... 展开";
+                span.innerHTML = content.substring(0, len);
+            }
+        }
+        // 设置div内容为空，span元素 a元素加入到div中
+        ctn.innerHTML = "";
+        ctn.appendChild(span);
+        ctn.appendChild(a);
+    }    
+    showmore("contentid")    
+</script>

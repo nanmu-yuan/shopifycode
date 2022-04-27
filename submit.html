@@ -1,0 +1,283 @@
+<style>
+    .form-title {
+        margin: 25px 0;
+    }
+    .form-title h2 {
+        font-size: 24px;
+    }
+    label{
+        font-size: 16px;
+    }
+    input {
+        height: 25px;
+        border: none;
+
+        border-bottom: 1px solid #AFAFAF;
+        background-color: transparent;
+        outline: none;
+    }
+    .radio-box {
+        display: flex;
+
+    }
+
+    .radio-box div {
+        margin-right: 15px;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .radio-box div input {
+
+        vertical-align: text-bottom;
+        margin-bottom: -3px;
+    }
+    .accounts-box-item{
+        display: flex;
+        margin: 12px 0;
+    }
+    .account-item-img{
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    .account-item-img img{
+        width: 100%;
+    }
+    .account-item-input{
+        width: 100%;
+    }
+    .form-btn-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    #contact_form{
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+</style>
+<div class="box">
+    <div class="wrapper">
+        <div class="grid">
+            <div class="grid__item large--eight-twelfths push--large--two-twelfths">
+
+                {%- unless page.content == blank -%}
+                <div class="page-content rte">
+                    {{ page.content }}
+                </div>
+                {%- endunless -%}
+
+                {%- form 'contact', class: 'form-vertical' -%}
+                {%- if form.posted_successfully? -%}
+                <script>
+                    window.open("https://www.monstervalley.com/pages/submit-successful-page", "_self")
+                </script>
+                {%- endif -%}
+
+                {%- if form.errors -%}
+                {{ form.errors | default_errors }}
+                {%- endif -%}
+                <div class="form-title">
+                    <h2>Which one of the following best describes you?</h2>
+                </div>
+                <label for="ContactFormType">Choose athlete type</label>
+                <select name="contact[type]">
+                    <option value="volvo">Group Fitness/Private/Studio Instructor </option>
+                    <option value="saab">Personal Trainer</option>
+                    <option value="opel">Run Club Leader</option>
+                    <option value="audi">Athlete</option>
+                    <option value="audi">Coach/Team Trainer / Staf</option>
+                    <option value="audi">Studio Owner</option>
+                    <option value="audi">Studio Manager</option>
+                </select>
+                <div class="form-title">
+                    <h2>Your information</h2>
+                </div>
+                <div class="grid grid-small">
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormFirstName">First Name</label>
+                        <input type="text" id="ContactFormFirstName" name="contact[first_name ]" autocapitalize="words"
+                            autofocus="autofocus" value="{{ form.first_name  }}">
+                    </div>
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormLastName">Last Name</label>
+                        <input type="text" id="ContactFormLastName" name="contact[last_name]" autocapitalize="words"
+                            autofocus="autofocus" value="{{ form.last_name }}">
+                    </div>
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormPhone">Phone Number</label>
+                        <input type="text" id="ContactFormPhone" name="contact[phone]"
+                           autocapitalize="words" pattern="[0-9\-]*"
+                            autofocus="autofocus" value="{{ form.phone }}">
+                    </div>
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormEmail">Email</label>
+                        <input type="email" id="ContactFormEmail"
+                            class="{%- if form.errors contains 'email' -%}input-error{%- endif -%}"
+                            name="contact[email]"  autocorrect="off"
+                            autocapitalize="off"
+                            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                            required="required" aria-required="true"
+                            value="{%- if form.email -%}{{ form.email }}{%- elsif customer -%}{{ customer.email }}{%- endif -%}"
+                            {%- if form.errors contains 'email' -%} aria-invalid="true" {%- endif -%}>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <h2>Gender</h2>
+                </div>
+                <div class="radio-box">
+                    <div> <input class="input1" type="radio" id="ContactFormFemale" name="contact[sex]" value="Female">
+                        <label for="ContactFormFemale">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ContactFormMale" name="contact[sex]" value="Male">
+                        <label for="ContactFormMale">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ContactFormOther" name="contact[sex]" value="Prefer not to specify">
+                        <label for="ContactFormOther">Prefer not to specify</label>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <h2>Your Sizes</h2>
+                </div>
+                <label style="margin-bottom: 22px;" for="ContactFormSize">Select your most common size for the
+                    following.</label>
+                <div class="grid grid-small">
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormTopSize">Top</label>
+                        <select name="contact[TopSize]">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                    <div class="grid__item large--six-twelfths">
+                        <label for="ContactFormBottomSize">Bottom</label>
+                        <select name="contact[BottomSize]">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-title">
+                    <h2>Social Media Accounts</h2>
+                </div>
+                <label style="margin-bottom: 22px;" for="ContactFormSize">Optional</label>
+                <div class="form-accounts-box">
+                    <div class="accounts-box-item">
+                        <div class="account-item-img">
+                            <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/1161953_instagram_icon_b741b124-768b-4609-b83c-151f357f4612.png?v=1650611887" alt="" />
+                        </div>
+                        <div class="account-item-input"><input type="text" 
+                            id="ContactFormInstagarm"
+                            name="contact[Instagarm]" 
+                            placeholder="Instagarm handle"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            value="{{ form.Instagarm}}"
+                            ></div>
+                    </div>
+                    <div class="accounts-box-item">
+                        <div class="account-item-img">
+                            <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/104501_twitter_bird_icon_7d8525b2-e2b1-4a07-9ac6-59268fec0ec7.png?v=1650613392" alt="" />
+                        </div>
+                        <div class="account-item-input"><input type="text" 
+                            id="ContactFormTwitter"
+                            name="contact[Twitter]" 
+                            placeholder="Twitter handle"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            value="{{ form.Twitter}}"
+                            ></div>
+                    </div>
+                    <div class="accounts-box-item">
+                        <div class="account-item-img">
+                            <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/45.png?v=1650613411" alt="" />
+                        </div>
+                        <div class="account-item-input"><input type="text" 
+                            id="ContactFormYoutube"
+                            name="contact[Youtube]" 
+                            placeholder="Youtube handle"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            value="{{ form.Youtube}}"
+                            ></div>
+                    </div>
+                    <div class="accounts-box-item">
+                        <div class="account-item-img">
+                            <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/7422375_tik_tok_ok_music_note_icon_46726153-7859-42f2-9380-2ce05fa61b39.png?v=1650613428" alt="" />
+                        </div>
+                        <div class="account-item-input"><input type="text" 
+                            id="ContactFormTiktok"
+                            name="contact[Tiktok]" 
+                            placeholder="Tiktok handle"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            value="{{ form.Tiktok}}"
+                            ></div>
+                    </div>
+                </div>
+                <!--             <div class="grid grid-small">
+                <div class="grid__item large--six-twelfths">
+                  <label for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+                  <input type="text"
+                         id="ContactFormName"
+                         name="contact[{{ 'contact.form.name' | t }}]"
+                         placeholder="{{ 'contact.form.name' | t }}"
+                         autocapitalize="words"
+                         autofocus="autofocus"
+                         value="{%- if form.name -%}{{ form.name }}{%- elsif customer -%}{{ customer.name }}{%- endif -%}">
+                </div>
+                <div class="grid__item large--six-twelfths">
+                  <label for="ContactFormEmail">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+                  <input type="email" id="ContactFormEmail"
+                         class="{%- if form.errors contains 'email' -%}input-error{%- endif -%}"
+                         name="contact[email]"
+                         placeholder="{{ 'contact.form.email' | t }}"
+                         autocorrect="off"
+                         autocapitalize="off"
+                         pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$"
+                         required="required"
+                         aria-required="true"
+                         value="{%- if form.email -%}{{ form.email }}{%- elsif customer -%}{{ customer.email }}{%- endif -%}"
+                      {%- if form.errors contains 'email' -%}
+                    aria-invalid="true"
+                      {%- endif -%}>
+                </div>
+              </div> -->
+
+                <!--             <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+              <input type="tel"
+                    id="ContactFormPhone"
+                    name="contact[{{ 'contact.form.phone' | t }}]"
+                    placeholder="{{ 'contact.form.phone' | t }}"
+                    pattern="[0-9\-]*"
+                    value="{%- if form.phone -%}{{ form.phone }}{%- elsif customer -%}{{ customer.phone }}{%- endif -%}"> -->
+
+                    <div class="form-btn-box">
+                        <button type="submit" class="btn btn--primary small--full" style="width:60%">
+                            <span class="btn__text" style="font-size: 24px;">
+                                submit
+                            </span>
+                        </button>
+                    </div>
+                {%- endform -%}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+"name": "Test",
+"settings": []
+}
+{% endschema %}

@@ -1,0 +1,881 @@
+<style>
+    #mainContent .wrapper {
+
+        max-width: none;
+        padding: 0;
+    }
+
+    #mainContent .section-header {
+        display: none;
+    }
+
+    #mainContent .wrapper .grid {
+        margin-left: 0;
+    }
+
+    #mainContent .wrapper .grid__item {
+        left: 0;
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+
+    #mainContent img {
+        border-radius: 0;
+    }
+
+    #mainContent .box {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .rte {
+        margin-bottom: 0px;
+    }
+
+    .txt {
+        text-align: center;
+        max-width: 1060px;
+        margin: 60px auto;
+        font-size: 34px;
+    }
+
+    .park-content {
+        background: #f9f9f9;
+    }
+
+    .park-content .banner {
+        position: relative;
+        color: #fff;
+    }
+
+    .park-content .banner .title {
+        font-size: 72px;
+        margin-bottom: 50px;
+    }
+
+    .park-content .banner .desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .park-content .banner .info {
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .park-content .banner .info>div:first-child {
+        margin-right: 60px;
+    }
+
+    .park-content .banner .info img {
+        width: 23px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: text-top;
+    }
+
+    .park-content .banner .txtContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .park-content img {
+        width: 100%;
+        display: block;
+    }
+
+    .park-content .page-content {
+        max-width: 1300px;
+        margin: auto;
+        margin-top: 31px;
+        padding-bottom: 200px;
+    }
+
+    .park-content .page-content h3 {
+        font-size: 48px;
+        padding: 70px 0 35px;
+        text-align: center;
+    }
+
+    .park-content .page-content .sub {
+        padding-bottom: 40px;
+        font-size: 26px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .park-content .page-content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 45px;
+        padding-top: 50px;
+
+    }
+
+    .park-content .page-content .park-box .product-desc {
+        background-color: #efefef;
+        padding: 14px;
+        padding-bottom: 30px;
+    }
+
+    .park-content .page-content .park-box .product-desc .desc {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 61px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors>div {
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 3px;
+    }
+
+    .park-content .page-content .park-box .product-desc .colors i {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .park-content .page-content .park-box a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
+    .park-content .page-content .park-box .btn {
+        background-color: #000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #fff;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    .park-content .banner picture {
+        display: flex;
+    }
+
+    .title-box1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 35px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 {
+        font-size: 18px;
+        color: #000;
+        line-height: 30px;
+        padding: 61px 142px 87px;
+        background-color: #eeee;
+    }
+
+    .title-box2 h2 {
+        text-align: center;
+    }
+
+    .title-list-item {
+        background: #FFFFFF;
+        border-radius: 10px 10px 10px 10px;
+        opacity: 1;
+    }
+
+    .item-pad {
+        padding: 27px;
+    }
+
+    .title-list-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 141px;
+        background-color: #eee;
+    }
+
+    .title-list-item-font {
+        font-size: 18px;
+        font-weight: normal;
+        color: #000000;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .title-list-item-icon {
+        width: 45px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .title-list-item-icon img {
+        height: 100%;
+    }
+
+    .title-list-item-bigfont {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .banner-img {
+        margin: 0 auto;
+        position: relative;
+        margin-top: 39px;
+    }
+
+    .banner-img .banner-img-title-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .banner-img-title-box p {
+        color: #fff;
+        font-size: 48px;
+    }
+
+    .title-b {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .product-desc .name {
+        font-size: 22px;
+        font-weight: 900;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .product-desc .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        font-weight: 400;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: none;
+    }
+
+    .price-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+        margin-top: 8px;
+    }
+
+    .list .park-box .price-box p {
+        font-size: 22px;
+        color: #000;
+        font-weight: normal;
+    }
+
+    .pc-show {
+        display: block;
+    }
+
+    .mobile-show {
+        display: none;
+    }
+
+    @media screen and (max-width: 769px) {
+        .park-content .page-content {
+            max-width: 769px;
+            margin: auto;
+            background: #f8f8f8;
+            margin-top: 31px;
+            padding-bottom: 45px;
+        }
+
+        .rte {
+            margin-bottom: 0;
+        }
+
+        .pc-show {
+            display: none;
+        }
+
+        .mobile-show {
+            display: block;
+        }
+
+        .park-content .page-content {
+            margin-top: 0;
+            padding: 0 6%;
+        }
+
+        .title-box1 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 0px 18px;
+            text-align: center;
+            background: #f8f8f8;
+        }
+
+        .title-box2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #000000;
+            line-height: 26px;
+            padding: 12px 0px 20%;
+            background: #f8f8f8;
+        }
+
+        .item-pad {
+            padding: 4px;
+        }
+
+
+
+        .title-b {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 900;
+            margin-top: 20%;
+        }
+
+        .title-list-item-bigfont {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .title-list-item-font {
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal
+        }
+
+        .park-content .banner .txtContent .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .park-content .banner .info {
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .park-content .banner .info>div:first-child {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .park-content .banner .txtContent .desc {
+            font-size: 14px;
+            padding: 0 10px;
+            line-height: 22px;
+        }
+
+        .park-content .page-content .list {
+            grid-template-columns: 1fr 1fr;
+            padding: 0 0 30px;
+            gap: 15px;
+        }
+
+        .banner-img-title-box p {
+            color: #fff;
+            font-size: 28px;
+        }
+
+        .product-desc .name {
+            font-size: 14px;
+            font-weight: 900;
+            color: #000000;
+        }
+
+
+        .park-content .page-content .park-box .product-desc {
+            background-color: #efefef;
+            padding: 8px;
+            padding-bottom: 12px;
+        }
+
+        .price-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .banner-img {
+            margin-bottom: 41px;
+        }
+
+        .list .park-box .price-box p {
+            font-size: 14px;
+            color: #000;
+            font-weight: normal;
+        }
+
+        .park-content .page-content .park-box .btn {
+            background-color: #000;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #fff;
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 0;
+        }
+
+        .mobile-list-box {
+            padding: 0 6%;
+            padding-bottom: 10%;
+            background: #fff;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .mobile-list-item {
+            text-align: center;
+        }
+
+        .mobile-list-item-img-box {
+            width: 60%;
+            margin: 0 auto;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mobile-list-item-img {
+            width: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 22px;
+        }
+
+        .mobile-list-item-img img {
+            width: 100%;
+        }
+
+        .mobile-list-item-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .mobile-list-item-desc {
+            padding: 0 25px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        #miss a,
+        #Insider a {
+            color: #000;
+            font-weight: 900;
+        }
+    }
+    .hideInfo{
+        display: none;
+    }
+</style>
+<div class="park-content">
+    <div class="banner">
+        <picture>
+            <source media="(min-width:769px)"
+                srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/10_2.jpg?v=1650703886" /> <img
+                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/10_1.jpg?v=1650703931" alt="" />
+        </picture>
+        <div class="txtContent">
+            <p class="title">Appalachian National Park</p>
+            <p class="desc"> </p>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="title-box1 hideInfo">
+            <p>Yosemite’s stunning natural beauty was the impetus for designating the area a national park on October 1,
+                1890, and it is still inspiring visitors 125 years later. This treasure of the Sierra Nevadas is home to
+                legendary granite monoliths, including El Capitan and Half Dome, as well as waterfalls, lakes, deep
+                valleys, majestic meadows, and ancient giant sequoias.</p>
+        </div>
+        <div class="pc-show hideInfo">
+            <div class="title-list-box">
+                <div class="title-list-item">
+                    <div class="item-pad">
+                        <div class="title-list-item-icon"><img
+                                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/1_42e84513-5930-412e-b4f2-db9bb2001d83.png?v=1650092760"
+                                alt="" /></div>
+                        <div class="title-list-item-bigfont">
+                            <p>Where</p>
+                        </div>
+                        <div style="margin-top: 23px;">
+                            <p class="title-list-item-font">central California, accessible from San Francisco,
+                                Sacramento,
+                                Los Angeles, and Las Vegas, Nevada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-list-item">
+                    <div class="item-pad">
+                        <div class="title-list-item-icon"><img
+                                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/lvyou_ico.png?v=1650092729"
+                                alt="" /></div>
+                        <div class="title-list-item-bigfont">
+                            <p>What to do</p>
+                        </div>
+                        <div style="margin-top: 23px;">
+                            <p class="title-list-item-font">art &amp; photography, rock climbing, biking, birdwatching,
+                                fishing, hiking, horseback riding, ice skating, stargazing, guided touring, water
+                                activities, camping, backpacking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-list-item">
+                    <div class="item-pad">
+                        <div class="title-list-item-icon"><img
+                                src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/ac217c28e264ba5248641237deb6d259.png?v=1650092662"
+                                alt="" /></div>
+                        <div class="title-list-item-bigfont">
+                            <p>When to go</p>
+                        </div>
+                        <div style="margin-top: 23px;">
+                            <p class="title-list-item-font">The park is open all year though some areas are inaccessible
+                                by
+                                car from approximately November through May. Millions of people visit Yosemite in the
+                                high
+                                season from April through October, so if you don’t want crowds, go at another time or
+                                plan a
+                                human-powered getaway into the wilderness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-list-box mobile-show hideInfo">
+            <div class="mobile-list-item">
+                <div class="mobile-list-item-img-box">
+                    <div class="mobile-list-item-img">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/1_42e84513-5930-412e-b4f2-db9bb2001d83.png?v=1650092760"
+                            alt="">
+                    </div>
+                    <div class="mobile-list-item-title">where</div>
+                </div>
+                <div class="mobile-list-item-desc">central California, accessible from San Francisco, Sacramento,
+                    Los Angeles, and Las Vegas, Nevada.</div>
+            </div>
+            <div class="mobile-list-item">
+                <div class="mobile-list-item-img-box">
+                    <div class="mobile-list-item-img">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/lvyou_ico.png?v=1650092729"
+                            alt="">
+                    </div>
+                    <div class="mobile-list-item-title">What to do</div>
+                </div>
+                <div class="mobile-list-item-desc">art &amp; photography, rock climbing, biking, birdwatching,
+                    fishing, hiking, horseback riding, ice skating, stargazing, guided touring, water
+                    activities, camping, backpacking.</div>
+            </div>
+            <div class="mobile-list-item">
+                <div class="mobile-list-item-img-box">
+                    <div class="mobile-list-item-img">
+                        <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/ac217c28e264ba5248641237deb6d259.png?v=1650092662"
+                            alt="">
+                    </div>
+                    <div class="mobile-list-item-title">When to go</div>
+                </div>
+                <div class="mobile-list-item-desc">The park is open all year though some areas are inaccessible by
+                    car from approximately November through May. Millions of people visit Yosemite in the high
+                    season from April through October, so if you don’t want crowds, go at another time or plan a
+                    human-powered getaway into the wilderness.</div>
+            </div>
+        </div>
+        <div class="title-box2 pc-show hideInfo">
+            <p class="title-b">Don’t miss</p>
+            <p>Yosemite Valley includes the most famous attractions in the park, such as Half Dome, El Capitan, and
+                Yosemite Falls. These iconic areas are almost always busy, but they are definitely worth seeing despite
+                the crowds.</p>
+            <p>If you’re ready for a more remote adventure, head up to Hetch Hetchy Valley in the park’s peaceful
+                northwest corner. Located at 3,900 feet, Hetch Hetchy is a hiker’s paradise full of thundering
+                waterfalls and wildflower displays in the spring. Though temperatures rise in the summer, you can cool
+                off in hidden canyons and high-country lakes.</p>
+            <p>The Glacier Point overlook provides a breathtaking view of Yosemite Valley, Half Dome, Yosemite Falls,
+                and Yosemite’s high country. You can get there by car from late May through October or November, but the
+                road is closed once snow begins to accumulate. That just makes the trip even more fun. Strap on some
+                cross-country skis and tour 10 miles up to the viewpoint.</p>
+            <p>Hang out with giants. The Mariposa Grove is Yosemite’s largest ancient sequoia grove, with 500 mature
+                giant sequoias. A 4-mile, round-trip hike with 500 feet of elevation change gets you to the grove, and
+                you can continue on another 1.5 miles round trip to the 1,800-year-old Grizzly Giant and the California
+                Tunnel Tree.</p>
+            <p>Some consider Yosemite the rock climbing center of the universe, so do some climbing, even if you’re a
+                newbie. We can’t all be Alex Honnold, so the park offers an endless variety of challenges for every
+                level of climber. Climbing instruction and guide services are available in the park.</p>
+            <p>Walk through the reconstructed village of Ahwahnee and learn about the Ahwahneechee people who have lived
+                in the Yosemite area for perhaps as long as 7,000 years. Discover the wide variety of plants they used
+                for food, medicine, and making tools such as baskets, and see the ceremonial roundhouse, bark houses,
+                and sweathouse that members of the local Miwok tribes still use.</p>
+            <p class="title-b">Insider tips</p>
+            <p>You can drive your car, take a shuttle, or ride your bike around the main paved roads of Yosemite.
+                Explore further by hiking, backpacking, or trying a unique wilderness mode of transportation–a mule
+                ride.</p>
+            <p>A reservation will be required to drive into Yosemite during peak hours starting May 20, 2022.</p>
+            <p>If you’re in the park from mid- to late-February, you can catch an amazing Yosemite sight. Horsetail Fall
+                transforms into a cascade of what appears to be water on fire when it reflects the orange glow of
+                sunset. The sunset also lights up the granite walls in brilliant reds and oranges.</p>
+            <p>Yosemite is home to over 400 animal species, including bears. If you’re camping, pack everything that has
+                a scent—including food, soap, toothpaste, and trash—inside the bear lockers provided. Never leave food
+                or other smelly items in your car, truck bed, or roof compartment overnight. Bears can and do break into
+                cars.</p>
+            <p>Just outside the park, lies the town of Bodie, once a vibrant community of 10,000 residents but now a
+                ghost town preserved in a state of "arrested decay." Walk the deserted streets and explore the old
+                church, the mill, and 170 other buildings. If you’re up for mingling with ghosts, it’s best to go after
+                dark.</p>
+        </div>
+        <div class="banner-img">
+            <picture>
+                <source media="(min-width:769px)"
+                    srcset="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/502.png?v=1650095326" /> <img
+                    src="https://cdn.shopify.com/s/files/1/0598/7955/5231/files/470.png?v=1650103873" alt="" />
+            </picture>
+            <div class="banner-img-title-box">
+                <p>Clothing Guide</p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="park-box"><a
+                    href="/collections/jakcets-vests/products/safari-fisherman-vest?variant=41739773477023"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/f9f93fb86c30480fb790e533b340f384_30a3242c-2c0d-4014-8c04-9dea4b8c8bf1_720x720.jpg?v=1645956027"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Safari Fisherman Vest">Safari Fisherman Vest</p>
+                        <p class="desc">A versatile and lightweight vest with vertical pocket styling. This vest was
+                            designed with big adventures in mind—like going on safari or fishing expeditions, but it’s
+                            also great for mellow hikes and camping. Its multifunctional pocket design ensures you have
+                            a place for all of your outdoor gadgets and personal items. Zip and Velcro closures keep
+                            them safe. The back is detachable exposing a mesh inner layer—perfect for all four seasons.
+                        </p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$45.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>5 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/men/products/mens-moisture-wicking-seamless-long-sleeve-t-shirt?variant=41914919485599">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/1fea8074498e4f71b806e8729d5d05dd_720x720.jpg?v=1645957056"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Moisture Wicking Seamless Long Sleeve T-Shirt">Moisture Wicking Seamless
+                            Long Sleeve T-Shirt</p>
+                        <p class="desc">Moisture-wicking and remarkably soft, this essential performance T-shirt makes a
+                            great choice for any workout and layers easily when the temperatures are cool.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$25.00</p>
+                            </div>
+                            <div class="review">
+                                <p>3 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/bottom/products/workwear-shorts-mens-casual-wide-leg-straight-solid-color-five-point-pants?variant=41787545682079">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/SP211112H3HF_720x720.jpg?v=1645956709"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Tooling Shorts">Tooling Shorts</p>
+                        <p class="desc">Japanese vintage-style shorts. Very comfortable made out of a special soft
+                            fabric. Simple and versatile, is a great look for many occasions.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$35.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>3 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/womens-new-arrival/products/womens-loose-quick-drying-zip-cardigan?variant=41910154985631">
+                    <img src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/ef2d76adf4d3409991588edf6e1cad34_720x720.jpg?v=1645956954"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Women's Loose Quick-Drying Zip Cardigan -down">Women's Loose Quick-Drying
+                            Zip Cardigan -down</p>
+                        <p class="desc">Designed for short hikes, this hooded cardigan is easy to put on and take off,
+                            provides sun protection, is breathable and doesn't feel stuffy.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$39.00</p>
+                            </div>
+                            <div class="review">
+                                <p>5 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/women-tops/products/womens-quick-dry-zip-bra?variant=41945947504799"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/cc316574600f401aae85311eaefe836a_720x720.jpg?v=1646374772"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Women's Quick Dry Zip Bra">Women's Quick Dry Zip Bra</p>
+                        <p class="desc">Zip bra wicks sweat and minimizes distractions while you pound the pavement—and
+                            it's a breeze to take off when your run is over.</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$15.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+            <div class="park-box"><a
+                    href="/collections/women/products/womens-side-pocket-yoga-pants?variant=42102488989855"> <img
+                        src="https://cdn.shopify.com/s/files/1/0598/7955/5231/products/f7d10dd20be64e0a9064ae708d44561eO1CN01FWgW9x22DRCA9yJqx__2189087086-0-cib_720x720.jpg?v=1650275785"
+                        alt="" />
+                    <div class="product-desc">
+                        <p class="name" title="Women's Side Pocket Yoga Pants">Women's Side Pocket Yoga Pants</p>
+                        <p class="desc">Features: Made of super soft stretch fabric Buttery soft hand feeling, matte
+                            finish, non see-through High-waist, seamless waistband to contour your curves and
+                            streamlines your shape A moderate amount of compression without feeling suffocated</p>
+                        <div class="price-box">
+                            <div class="price">
+                                <p>$19.00</p>
+                            </div>
+                            <div class="review" style="display: none;">
+                                <p>1 Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">ADD TO CART</div>
+                </a></div>
+        </div>
+        <div class="title-box2 mobile-show hideInfo">
+            <p class="title-b">Don’t miss</p>
+            <p>Yosemite Valley includes the most famous attractions in the park, such as Half Dome, El Capitan, and
+                Yosemite Falls. These iconic areas are almost always busy, but they are definitely worth seeing despite
+                the crowds.</p>
+            <div id="miss">
+                If you’re ready for a more remote adventure, head up to Hetch Hetchy Valley in the park’s peaceful
+                northwest corner. Located at 3,900 feet, Hetch Hetchy is a hiker’s paradise full of thundering
+                waterfalls and wildflower displays in the spring. Though temperatures rise in the summer, you can cool
+                off in hidden canyons and high-country lakes.<br><br>
+                The Glacier Point overlook provides a breathtaking view of Yosemite Valley, Half Dome, Yosemite Falls,
+                and Yosemite’s high country. You can get there by car from late May through October or November, but the
+                road is closed once snow begins to accumulate. That just makes the trip even more fun. Strap on some
+                cross-country skis and tour 10 miles up to the viewpoint.<br><br>
+                Hang out with giants. The Mariposa Grove is Yosemite’s largest ancient sequoia grove, with 500 mature
+                giant sequoias. A 4-mile, round-trip hike with 500 feet of elevation change gets you to the grove, and
+                you can continue on another 1.5 miles round trip to the 1,800-year-old Grizzly Giant and the California
+                Tunnel Tree.<br><br>
+                Some consider Yosemite the rock climbing center of the universe, so do some climbing, even if you’re a
+                newbie. We can’t all be Alex Honnold, so the park offers an endless variety of challenges for every
+                level of climber. Climbing instruction and guide services are available in the park.<br><br>
+                Walk through the reconstructed village of Ahwahnee and learn about the Ahwahneechee people who have
+                lived
+                in the Yosemite area for perhaps as long as 7,000 years. Discover the wide variety of plants they used
+                for food, medicine, and making tools such as baskets, and see the ceremonial roundhouse, bark houses,
+                and sweathouse that members of the local Miwok tribes still use.</p>
+            </div>
+            <p class="title-b">Insider tips</p>
+            <p>You can drive your car, take a shuttle, or ride your bike around the main paved roads of Yosemite.
+                Explore further by hiking, backpacking, or trying a unique wilderness mode of transportation–a mule
+                ride.</p>
+            <p>A reservation will be required to drive into Yosemite during peak hours starting May 20, 2022.</p>
+
+            <div id="Insider">
+                If you’re in the park from mid- to late-February, you can catch an amazing Yosemite sight. Horsetail
+                Fall
+                transforms into a cascade of what appears to be water on fire when it reflects the orange glow of
+                sunset. The sunset also lights up the granite walls in brilliant reds and oranges.<br><br>
+                Yosemite is home to over 400 animal species, including bears. If you’re camping, pack everything that
+                has
+                a scent—including food, soap, toothpaste, and trash—inside the bear lockers provided. Never leave food
+                or other smelly items in your car, truck bed, or roof compartment overnight. Bears can and do break into
+                cars. <br><br>
+                Just outside the park, lies the town of Bodie, once a vibrant community of 10,000 residents but now a
+                ghost town preserved in a state of "arrested decay." Walk the deserted streets and explore the old
+                church, the mill, and 170 other buildings. If you’re up for mingling with ghosts, it’s best to go after
+                dark.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function showmore(contentid, num) {
+        var len = num;  
+        var ctn = document.getElementById(contentid);  
+        var content = ctn.innerHTML;                   
+        content2 = content.replace(/(^s*)|(s*$)/g, "");
+        content2 = content2.replace(/<[^>]+>/g, "");
+
+        //alert(content);
+        var span = document.createElement("span");    
+        var a = document.createElement("a");           
+        span.innerHTML = content2.substring(0, len);    
+
+        a.innerHTML = content.length > len ? "... Read More" : "";   
+        a.href = "javascript:void(0)";
+
+        a.onclick = function () {
+            if (a.innerHTML.indexOf("Read More") > 0) {     
+                a.innerHTML = "<<&nbsp;Hide";
+                span.innerHTML = content;
+            } else {
+                a.innerHTML = "... Read More";
+                span.innerHTML = content.substring(0, len);
+            }
+        }
+        ctn.innerHTML = "";
+        ctn.appendChild(span);
+        ctn.appendChild(a);
+    }
+    showmore("miss", 300);
+    showmore("Insider", 306);
+</script>
